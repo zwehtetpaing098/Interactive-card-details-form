@@ -1,0 +1,46 @@
+.credit{
+    width: 447px;
+    height: 245px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label{
+    font-size: 1.2rem;
+    font-weight: $large;
+    letter-spacing: 0.2rem;
+}
+
+input{
+    border: 1px solid $Light_grayish_violet;
+}
+
+input:focus{
+    outline: none;
+    background: linear-gradient(#fff, #fff) padding-box,linear-gradient(to right, $Active_color1, $Active_color2) border-box;
+    border: 1px solid transparent;
+    border-radius: 50px;
+}
+
+input::placeholder{
+    font-size: 1.8rem;
+    color: $Light_grayish_violet;
+    font-weight: $large;
+}
+
+#nameerror, #numbererror, #dateerror, #cvcerror{
+    display: none;
+}
+
+.error{
+    margin-top: 5px;
+    color: $Red;
+    font-size: 1.4rem;
+}
+
+@media(max-width:991px){
+    .credit{
+        width: 347px;
+        height: 190px;
+    }
+}

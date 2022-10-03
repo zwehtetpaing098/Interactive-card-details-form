@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.credit {
+  width: 447px;
+  height: 245px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+input {
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+
+input:focus {
+  outline: none;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) border-box;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+input::-moz-placeholder {
+  font-size: 1.8rem;
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+}
+
+input:-ms-input-placeholder {
+  font-size: 1.8rem;
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-size: 1.8rem;
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+}
+
+#nameerror, #numbererror, #dateerror, #cvcerror {
+  display: none;
+}
+
+.error {
+  margin-top: 5px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 991px) {
+  .credit {
+    width: 347px;
+    height: 190px;
+  }
+}
+.credit_front {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  background-image: url(../images/bg-card-front.png);
+}
+.credit_front h1 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.credit_front div {
+  color: hsl(0deg, 0%, 100%);
+}
+.credit_front div p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+.credit_back {
+  position: absolute;
+  top: 480px;
+  left: 250px;
+  background-image: url(../images/bg-card-back.png);
+  position: relative;
+}
+.credit_back p {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+
+section .box {
+  position: relative;
+}
+section .box .card-box {
+  z-index: 2;
+  position: absolute;
+}
+section .box .card-box .inner-card-box {
+  position: relative;
+}
+section .box .background {
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section .box .login {
+  z-index: 3;
+}
+section .box .login .inner-login {
+  margin-left: 38%;
+}
+section .box .login .inner-login .success {
+  display: none;
+  margin-left: 65px;
+}
+section .box .login .inner-login .success img {
+  margin-left: 35%;
+}
+section .box .login .inner-login .success h1 {
+  font-size: 3rem;
+}
+section .box .login .inner-login .success p {
+  color: hsl(279deg, 6%, 55%);
+  font-weight: 500;
+}
+section .box .login .inner-login .cardholder label, section .box .login .inner-login .cardholder input {
+  display: block;
+}
+section .box .login .inner-login .cardholder input {
+  width: 400px;
+}
+section .box .login .inner-login .cardnumber label, section .box .login .inner-login .cardnumber input {
+  display: block;
+}
+section .box .login .inner-login .cardnumber input {
+  width: 400px;
+}
+section .box .login .inner-login .date-cvc {
+  display: flex;
+}
+section .box .login .inner-login .date-cvc .date .mmyy input {
+  width: 85px;
+}
+section .box .login .inner-login .date-cvc .cvc {
+  margin-left: 20px;
+}
+section .box .login .inner-login .date-cvc .cvc label, section .box .login .inner-login .date-cvc .cvc input {
+  display: block;
+}
+section .box .login .inner-login .date-cvc .cvc input {
+  width: 200px;
+}
+section .box .login .inner-login .forcvc {
+  margin-left: 200px;
+}
+section .box .login .inner-login button {
+  width: 400px;
+  border: 1px solid hsl(278deg, 68%, 11%);
+  font-weight: 500;
+  color: white;
+  background-color: hsl(278deg, 68%, 11%);
+}
+
+@media (max-width: 1300px) {
+  .credit_front {
+    left: 50px;
+  }
+  .credit_back {
+    left: 100px;
+  }
+}
+@media (max-width: 991px) {
+  section .credit_front {
+    z-index: 2;
+    top: 150px;
+    left: 35px;
+  }
+  section .credit_front img {
+    width: 60px;
+  }
+  section .credit_front h1 {
+    font-size: 2.2rem;
+  }
+  section .credit_front div p {
+    font-size: 1.1rem;
+  }
+  section .credit_back {
+    z-index: 1;
+    top: 42px;
+  }
+  section .credit_back p {
+    font-size: 1.1rem;
+  }
+  section .box .background {
+    background-image: url(../images/bg-main-mobile.png);
+    height: 30%;
+  }
+  section .box .card-box {
+    display: flex;
+    justify-content: center;
+  }
+  section .box .login {
+    height: 70%;
+    align-items: center;
+  }
+  section .box .login .inner-login {
+    margin-top: 75px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 700px) {
+  section .box .card-box {
+    justify-content: start;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,197 @@
+// Card Design
+.credit_front{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    background-image: url(../images/bg-card-front.png);
+    h1{
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        color: $White;
+    }
+    div{
+        color: $White;
+        p{
+            font-size: 1.4rem;
+            font-weight: $large;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+.credit_back{
+    position: absolute;
+    top: 480px;
+    left: 250px;
+    background-image: url(../images/bg-card-back.png);
+    position: relative;
+    p{
+        position: absolute;
+        top: 45%;
+        left: 80%;
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+        color: $White;
+        font-weight: $large;
+    }
+}
+
+section{
+    .box{
+        position: relative;
+        // for card
+        .card-box{
+            z-index: 2;
+            position: absolute;
+            .inner-card-box{
+                position: relative;
+            }
+        }
+        // for background
+        .background{
+            background-image: url(../images/bg-main-desktop.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        // for login
+        .login{
+            z-index: 3;
+            // inner
+            .inner-login{
+                margin-left: 38%;
+                // success
+                .success{
+                    display: none;
+                    margin-left: 65px;
+                    img{
+                        margin-left: 35%;
+                    }
+                    h1{
+                        font-size: 3rem;
+                    }
+                    p{
+                        color: $Dark_grayish_violet;
+                        font-weight: $large;
+                    }
+                }
+                // cardholder
+                .cardholder{
+                    label,input{
+                        display: block;
+                    }
+                    input{
+                        width: 400px;
+                    }
+                }
+                // cardnumber
+                .cardnumber{
+                    label,input{
+                        display: block;
+                    }
+                    input{
+                        width: 400px;
+                    }
+                }
+                // date-cvc
+                .date-cvc{
+                    display: flex;
+                    // date
+                    .date{
+                        .mmyy{
+                            input{
+                                width: 85px;
+                            }
+                        }
+                    }
+                    // cvc
+                    .cvc{
+                        margin-left: 20px;
+                        label,input{
+                            display: block;
+                        }
+                        input{
+                            width: 200px;
+                        }
+                    }
+                }
+                .forcvc{
+                    margin-left: 200px;
+                }
+                // button
+                button{
+                    width: 400px;
+                    border: 1px solid $Very_dark_violet;
+                    font-weight: $large;
+                    color: white;
+                    background-color: $Very_dark_violet;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+@media(max-width: 1300px){
+    .credit_front{
+        left: 50px;
+    }
+    .credit_back{
+        left: 100px;
+    }
+}
+
+@media(max-width: 991px){
+    section{
+        .credit_front{
+            z-index: 2;
+            top: 150px;
+            left: 35px;
+            img{
+                width: 60px;
+            }
+            h1{
+                font-size: 2.2rem;
+            }
+            div{
+                p{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .credit_back{
+            z-index: 1;
+            top: 42px;
+            p{
+                font-size: 1.1rem;
+            }
+        }
+        .box{
+            .background{
+                background-image: url(../images/bg-main-mobile.png);
+                height: 30%;
+            }
+            .card-box{
+                display: flex;
+                justify-content: center;
+            }
+            
+            .login{
+                height: 70%;
+                align-items: center;
+                .inner-login{
+                    margin-top: 75px;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:700px){
+    section .box .card-box{
+        justify-content: start;
+    }
+}
+
